@@ -1,6 +1,6 @@
 # Placeholder Resume TeX
 
-This repository contains a placeholder copy of the resume TeX files. The experience role entries have been replaced with generic text.
+This repository contains the template for my resume. 
 
 ## Compile
 
