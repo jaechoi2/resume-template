@@ -1,6 +1,6 @@
 # Placeholder Resume TeX
 
-This directory contains a placeholder copy of the resume TeX files. The experience role entries have been replaced with generic text.
+This repository contains a placeholder copy of the resume TeX files. The experience role entries have been replaced with generic text.
 
 ## Compile
 
@@ -39,4 +39,3 @@ resume.pdf
 
 - `resume.tex` is the main file.
 - `education.tex`, `experience.tex`, and `skills.tex` are included by the main file with `\makerubric`.
-- `example.tex` was intentionally not copied into this directory.
