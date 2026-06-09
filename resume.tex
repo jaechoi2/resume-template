@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%
+% Resume variant adapted from "A Customised CurVe CV" by LianTze Lim.
+% Original template: https://www.overleaf.com/latex/templates/a-customised-curve-cv/mvmbhkwsnmwv
+% Template license: Creative Commons CC BY 4.0.
+
+\documentclass[letterpaper,skipsamekey,10pt,english]{curve}
+
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage[final]{microtype}
+
+\geometry{left=0.64in,right=0.64in,top=0.56in,bottom=0.52in}
+
+% Modern sans-first stack with broad local fallbacks.
+\IfFontExistsTF{IBM Plex Sans}
+  {\setmainfont{IBM Plex Sans}\setsansfont{IBM Plex Sans}}
+  {\IfFontExistsTF{Fira Sans}
+    {\setmainfont{Fira Sans}\setsansfont{Fira Sans}}
+    {\IfFontExistsTF{Inter}
+      {\setmainfont{Inter}\setsansfont{Inter}}
+      {\IfFontExistsTF{Avenir Next}
+        {\setmainfont{Avenir Next}\setsansfont{Avenir Next}}
+        {\setmainfont{TeX Gyre Heros}\setsansfont{TeX Gyre Heros}}}}}
+\IfFontExistsTF{JetBrains Mono}
+  {\setmonofont{JetBrains Mono}[Scale=MatchLowercase]}
+  {\IfFontExistsTF{SF Mono}
+    {\setmonofont{SF Mono}[Scale=MatchLowercase]}
+    {\IfFontExistsTF{Menlo}
+      {\setmonofont{Menlo}[Scale=MatchLowercase]}
+      {\setmonofont{TeX Gyre Cursor}[Scale=MatchLowercase]}}}
+\newfontfamily\faSolid{FontAwesome5Free-Solid-900.otf}
+\renewcommand{\familydefault}{\sfdefault}
+\linespread{0.98}
+
+\definecolor{SwishLineColour}{HTML}{9BE7C7}
+\definecolor{MarkerColour}{HTML}{2563EB}
+\definecolor{TextGrey}{HTML}{111827}
+\definecolor{MutedGrey}{HTML}{4B5563}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=TextGrey,
+  linkcolor=TextGrey,
+  pdftitle={Resume of Professional Shenanigans},
+  pdfauthor={Captain Placeholder}
+}
+\urlstyle{same}
+
+\pagestyle{empty}
+\raggedright
+\setlength\headerspace{12pt}
+\headerscale{0.62}
+\rubricalignment{l}
+\rubricfont{\fontsize{15.2}{17}\selectfont\bfseries\color{TextGrey}}
+\keyfont{\small\bfseries\ttfamily\color{TextGrey}}
+\setlength\tabcolsep{5pt}
+\setlength\rubricspace{4pt}
+\setlength\rubricafterspace{3pt}
+\makeatletter
+\renewcommand\@@rubrichead[1]{%
+  \parbox[t]{\linewidth}{%
+    {\@rubricfont #1}\\[-2pt]%
+    {\color{SwishLineColour}\rule{\linewidth}{1.8pt}}%
+  }%
+}
+\makeatother
+\keyalignment{r}
+\prefix{\textcolor{MarkerColour}{\raisebox{0.06ex}{\scriptsize\texttt{>}}}\hspace{0.85ex}}
+
+\makeatletter
+\newcommand\roleentry{%
+  \@nextentry
+  \noalign\bgroup\gdef\@beforespace{\subrubricbeforespace}%
+  \@roleentry}
+\newcommand\@roleentry[3][]{%
+  \gdef\@nextentry{}\@key{#1}%
+  \egroup
+  \@@key&\makebox[0pt][l]{\rule[-2pt]{0pt}{15pt}\textbf{#2}}&\raggedleft\textbf{#3}\\[1.5pt]\par}
+\newcommand\plainentry{%
+  \@nextentry
+  \noalign\bgroup\gdef\@beforespace{\subrubricbeforespace}%
+  \@plainentry}
+\newcommand\@plainentry[2][]{%
+  \gdef\@nextentry{}\@key{#1}%
+  \egroup
+  \@@key&&#2\\\par}
+\makeatother
+
+\newcommand{\emailicon}{{\faSolid\symbol{61664}}}
+\newcommand{\phoneicon}{{\faSolid\symbol{61589}}}
+\newcommand{\contactfield}[2]{%
+  {\textcolor{MarkerColour}{#1}}\hspace{0.55ex}#2\hspace{1.7em}%
+}
+
+\leftheader{%
+  {\fontsize{25}{28}\selectfont\bfseries Captain Placeholder}\\[2pt]
+  {\small\bfseries\color{MutedGrey}Senior Spreadsheet Whisperer}\\[7pt]
+  {\footnotesize
+    \contactfield{\emailicon}{\href{mailto:snacks@example.com}{\texttt{snacks@example.com}}}
+    \contactfield{\phoneicon}{\texttt{555.0100}}}
+}
+
+\rightheader{~}
+\title{Highly Official Nonsense}
+
+\begin{document}
+\color{TextGrey}
+\makeheaders[c]
+
+\makerubric{education}
+\makerubric{experience}
+\makerubric{skills}
+
+\end{document}
